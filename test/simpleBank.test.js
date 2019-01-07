@@ -51,7 +51,7 @@ contract('SimpleBank', function(accounts) {
   it("should withdraw correct amount", async () => {
     const bank = await SimpleBank.deployed();
     const initialAmount = 0;
-   
+
 	var result = await bank.withdraw(deposit, {from: alice});
     const balance = await bank.balance({from: alice});
 
